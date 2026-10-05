@@ -64,25 +64,40 @@ Key areas included:
 
 ## Headline Finding
 
-The controlled comparison indicated a substantial reduction in estimated process workload when AI was integrated into the operating process.
+The controlled comparison indicated a substantial reduction in **modelled process workload** when AI was integrated into the operating process.
 
-The manual control process required approximately **464 minutes** across the measured stages.
+| Run       | Operating Model      | Approx. Process Time | Experimental Score |
+| --------- | -------------------- | -------------------: | -----------------: |
+| **Run A** | Manual Control       |          **464 min** |          **28/30** |
+| **Run B** | AI-Engineered        |          **107 min** |          **28/30** |
+| **Run C** | Optimised AI-Enabled |          **108 min** |          **30/30** |
 
-The AI-engineered process was modelled at approximately **107 minutes**, with the optimised process at approximately **108 minutes**.
+Compared with the manual control:
 
-This represents an estimated reduction of approximately **77% in process time compared with the manual control**.
+* Run B represented an estimated **77.0% reduction** in process time.
+* Run C represented an estimated **76.7% reduction**, rounded to approximately **77%**.
 
-However, this figure should **not** be interpreted as a validated 77% real-world productivity gain.
+The important result was not simply the reduction in time.
 
-Runs B and C were controlled/modelled experiments rather than live production executions. The experiment therefore demonstrates the **potential capacity effect of the redesigned process**, not a proven production outcome.
+Run C retained almost all of the modelled capacity benefit of Run B while introducing stronger safeguards, clearer human-AI responsibility boundaries, and a formal learning mechanism.
+
+The approximately one-minute increase from Run B to Run C was therefore treated as an acceptable governance cost rather than a failure of optimisation.
+
+### Evidence Boundary
+
+The approximately 77% reduction is a **controlled/modelled process-time finding**, not a validated 77% real-world productivity gain.
+
+Run A established the manual control baseline. Runs B and C were controlled/modelled configurations rather than live production executions.
+
+The experiment therefore demonstrates the **potential capacity effect of the redesigned process**, not a proven production outcome.
 
 ---
 
 ## What the Experiment Demonstrated
 
-The experiment provided evidence that AI integration can be evaluated at the **process level**, rather than simply at the individual-task level.
+The experiment demonstrated the value of evaluating AI integration at the **process level**, rather than simply at the individual-task level.
 
-It also demonstrated a practical distinction between:
+It also established a practical distinction between:
 
 ### Automation
 
@@ -136,6 +151,8 @@ and
 
 The latter requires governance and human oversight.
 
+Importantly, the learning from Test #1 was used to define changes for the next experiment rather than being recorded only as a retrospective observation.
+
 ---
 
 ## Evidence Boundaries
@@ -174,9 +191,21 @@ The experiment provides the first controlled test in an ongoing programme intend
 
 ## Next Stage
 
-The findings from this experiment will be used to refine the methodology for subsequent AI automation tests.
+The findings from this experiment have been used to refine the methodology and evidence requirements for subsequent AI automation tests.
 
-Future tests will examine whether the framework developed here remains effective across different marketing processes, while progressively introducing greater levels of real-world execution and validation.
+Future tests will progressively introduce:
+
+* actual execution measurement
+* human intervention tracking
+* failure and exception conditions
+* rework measurement
+* more explicit quality measures
+* validation of human-AI control boundaries
+* and testing of the learning loop
+
+The objective is not to reproduce the approximately 77% result.
+
+The objective is to determine **how much of the potential capacity benefit survives increasingly realistic execution while maintaining quality, control and accountability.**
 
 ---
 
@@ -201,8 +230,7 @@ AI-Automation-Test-01/
 ├── data/
 ├── results/
 ├── safeguards/
-├── learning/
-└── evidence/
+└── learning/
 ```
 
-Detailed methodology, experimental runs, datasets, calculations, safeguards and post-mortem findings are documented within the repository.
+Detailed methodology, experimental runs, dataset, calculations, safeguards and learning are documented within the repository.
